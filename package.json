@@ -1,0 +1,35 @@
+{
+  "name": "api-node-express",
+  "version": "1.0.0",
+  "description": "API node com framework express",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Selmabras/git-remote-add-origin-https-github.com-Selmabras-api-node-express.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "javascript",
+    "mysql",
+    "express",
+    "mvc"
+  ],
+  "author": "Maria Selma Braslavski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Selmabras/git-remote-add-origin-https-github.com-Selmabras-api-node-express/issues"
+  },
+  "homepage": "https://github.com/Selmabras/git-remote-add-origin-https-github.com-Selmabras-api-node-express#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
