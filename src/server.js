@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import userRouter from './routers/userRouter.js';
 import produtoRouter from './routers/produtoRouter.js';
 import authRouter from './routers/authRouter.js';
-import {PORT} from './config.js';
+import { PORT } from './config.js';
 
 const api = express()
 //converte toda requisicao com body json para objeto no req.body

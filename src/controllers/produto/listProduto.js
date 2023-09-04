@@ -1,19 +1,18 @@
 import produto from '../../models/produtoModel.js'
 
-const getProduto = async (req, res) => {
+const listtProduto = async (req, res) => {
 
     try {
-        const produtoData = req.body
-        const [rows] = await produto.getById(produtoData.id)
+        const [rows] = await produto.getAll()
         if (rows.length === 0) {
             res.status(404).json({
-                error: `Produto id: ${produto.Data.id} não Encontrado!`
+                error: `Nenhum produto Encontrado!`
             })
 
         } else {
             res.json({
-                sucess: "Produto Encontrado com Sucesso",
-                user: rows[0]
+                sucess: "Produtos(s) Encontrado(s) com Sucesso",
+                user: rows
 
             })
         }
@@ -26,9 +25,4 @@ const getProduto = async (req, res) => {
     }
 }
 
-
-
-
-
-
-export default getProduto
+export default getAll
