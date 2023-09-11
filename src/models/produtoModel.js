@@ -5,7 +5,7 @@ const getById = async (id) => {
 
 }
 
-const getAll = async (id) => {
+const getAll = async () => {
     return await db.query("SELECT name, tipo, preco FROM produto")
 
 }
@@ -18,7 +18,7 @@ const create = async (user) => {
 }
 
 const update = async (user) => {
-    const { name, tipo, preco } = produto
+    const {id, name, tipo, preco } = produto
     return await db.query("UPDATE produto SET name = ?, tipo = ?, preco = ?, WHERE id;", [id, name, tipo, preco])
 
 }

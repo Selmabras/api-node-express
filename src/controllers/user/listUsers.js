@@ -1,23 +1,19 @@
 import user from '../../models/userModel.js'
 
-const listtUsers = async (req, res) => {
-
-    try {
+const listUsers = async (req, res) => {
+    try{
         const [rows] = await user.getAll()
-        if (rows.length === 0) {
+        if(rows.length === 0){
             res.status(404).json({
-                error: `Nenhum usuário Encontrado!`
+                error: `Nenhum usuário encontrado!`
             })
-
         } else {
             res.json({
-                sucess: "Usuário(s) Encontrado(s) com Sucesso",
-                user: rows
-
+                success: "Usuário(s) Encontrado(s) com Sucesso!",
+                users: rows
             })
         }
-
-    } catch (error) {
+    } catch (error){
         console.log(error)
         res.status(500).json({
             error: "Erro no servidor!",
@@ -25,4 +21,4 @@ const listtUsers = async (req, res) => {
     }
 }
 
-export default getAll
+export default listUsers

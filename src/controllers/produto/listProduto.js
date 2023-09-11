@@ -1,6 +1,6 @@
 import produto from '../../models/produtoModel.js'
 
-const listtProduto = async (req, res) => {
+const listProduto = async (req, res) => {
 
     try {
         const [rows] = await produto.getAll()
@@ -25,4 +25,4 @@ const listtProduto = async (req, res) => {
     }
 }
 
-export default getAll
+export default listProduto

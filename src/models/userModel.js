@@ -5,8 +5,8 @@ const getById = async (id) => {
 
 }
 
-const getAll = async (id) => {
-    return await db.query("SELECT name, email FROM users")
+const getAll = async () => {
+    return await db.query("SELECT * FROM users")
 
 }
 
@@ -18,7 +18,7 @@ const create = async (user) => {
 }
 
 const update = async (user) => {
-    const { name, email, pass } = user
+    const { id, name, email, pass } = user
     return await db.query("UPDATE users SET name = ?, email = ?, pass = ?, WHERE id;", [id, name, email, pass])
 
 }
