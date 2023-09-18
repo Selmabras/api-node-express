@@ -18,8 +18,8 @@ const create = async (user) => {
 }
 
 const update = async (user) => {
-    const { id, name, email, pass } = user
-    return await db.query("UPDATE users SET name = ?, email = ?, pass = ?, WHERE id;", [id, name, email, pass])
+    const { id, name, email, pass } = user;
+    return await db.query("UPDATE users SET name = ?, email = ?, pass = ? WHERE id = ?;", [name, email, pass, id])
 
 }
 
