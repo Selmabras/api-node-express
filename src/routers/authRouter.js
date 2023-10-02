@@ -1,9 +1,10 @@
 import express from 'express'
-import authLogin from '../controllers/auth/authLogin.js'
-import authLogout from '../controllers/auth/authLogout.js'
+import login from '../controllers/auth/login.js'
+import logout from '../controllers/auth/logout.js'
 
 const router = express.Router()
 
-router.post('/login', authLogin)
-router.post('/logout', authLogout)
+router.post('/login', login)
+router.post('/logout', logout)
+
 export default router
